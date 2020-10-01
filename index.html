@@ -3,9 +3,10 @@
 <html lang = "en">
     <head>
         <meta charset = "utf-8">
-        <title>IAT 339 CSS Basics</title>
+        <title>IAT 339 P01 Style Guide</title>
         <!--Copied this code from my P01 Weekly Submission-->
         <link rel = "stylesheet" href = "css/main.css">
+        <link rel = "stylesheet" href = "css/grid.css">
     </head>
     <body>
         <section id = "interEle">
@@ -162,9 +163,9 @@
                         &lt;/fieldset&gt;
 
                         &lt;fieldset class = "shippingInfo"&gt;
-                            &lt;label for = "address"&gt;Shipping Address:&lt;/label&gt;&lt;br&gt;
+                            &lt;label for = "address"&gt;Shipping Address:&lt;/label&gt;
                             &lt;input type = "text" name = "address" id = "address" required&gt;&lt;br&gt;
-                            &lt;label for = "province"&gt;Province&lt;/label&gt;&lt;br&gt;
+                            &lt;label for = "province"&gt;Province&lt;/label&gt;
                             &lt;input type = "text" name = "province" id = "province" required&gt;&lt;br&gt;
                         &lt;/fieldset&gt;
             
@@ -210,10 +211,10 @@
                 </fieldset>
 
                 <fieldset class = "shippingInfo">
-                    <label for = "address">Shipping Address</label><br>
+                    <label for = "address">Shipping Address</label>
                     <input type = "text" name = "address" id = "address" required><br>
                     
-                    <label for = "province">Province</label><br>
+                    <label for = "province">Province</label>
                     <input type = "text" name = "province" id = "province" required><br>
                 </fieldset>
 
@@ -227,33 +228,37 @@
             <h3>Code</h3>
             <pre>
                 <code>
-                    &lt;div>
-                        &lt;div&gt;
-                            &lt;p&gt;Item 1&lt;/p&gt;
-                            &lt;p&gt;Cost = $5&lt;/p&gt;
+                    &lt;div id = "cart"&gt;
+                        &lt;div class = "itemInCart shoppingGrid"&gt;
+                            &lt;img class = "picOfItem" src = "img/escudoPhaseChangerPL-01num004.jpeg" alt = "Escudo Power Phase Changer"&gt;
+                            &lt;h5 class = "titleOfItem"&gt;Phase Changer 120VAC&lt;/h5&gt;
+                            &lt;p class = "costOfItem"&gt;Cost = $5&lt;/p&gt;
                         &lt;/div&gt;
-                        &lt;div&gt;
-                            &lt;p&gt;Item 2&lt;/p&gt;
-                            &lt;p&gt;Cost = $5&lt;/p&gt;
+                        &lt;div class = "itemInCart shoppingGrid"&gt;
+                            &lt;img class = "picOfItem" src = "img/escudoPhaseChangerPL-01num007.jpeg" alt = "Escudo Power Phase Changer"&gt;
+                            &lt;h5 class = "titleOfItem"&gt;Phase Changer 220VAC&lt;/h5&gt;
+                            &lt;p class = "costOfItem"&gt;Cost = $5&lt;/p&gt;
                         &lt;/div&gt;
-                        &lt;div&gt;
-                            &lt;p&gt;Number of Items = 2&lt;/p&gt;
+                        &lt;div class = "totalOfCart"&gt;
+                            &lt;h5&gt;Number of Items = 2&lt;/h5&gt;
                             &lt;p&gt;Total cost = $10&lt;/p&gt;
                         &lt;/div&gt;
                     &lt;/div&gt;
                 </code>
             </pre>
-            <div>
-                <div>
-                    <p>Item 1</p>
-                    <p>Cost = $5</p>
+            <div id = "cart">
+                <div class = "itemInCart shoppingGrid">
+                    <img class = "picOfItem" src = "img/escudoPhaseChangerPL-01num004.jpeg" alt = "Escudo Power Phase Changer">
+                    <h5 class = "titleOfItem">Phase Changer 120VAC</h5>
+                    <p class = "costOfItem">Cost = $5</p>
                 </div>
-                <div>
-                    <p>Item 2</p>
-                    <p>Cost = $5</p>
+                <div class = "itemInCart shoppingGrid">
+                    <img class = "picOfItem" src = "img/escudoPhaseChangerPL-01num007.jpeg" alt = "Escudo Power Phase Changer">
+                    <h5 class = "titleOfItem">Phase Changer 220VAC</h5>
+                    <p class = "costOfItem">Cost = $5</p>
                 </div>
-                <div>
-                    <p>Number of Items = 2</p>
+                <div class = "totalOfCart">
+                    <h5>Number of Items = 2</h5>
                     <p>Total cost = $10</p>
                 </div>
             </div>
