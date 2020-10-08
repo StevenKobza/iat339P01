@@ -30,10 +30,12 @@ section#branding {
 /*Link Formatting*/
 a:hover img, a:active img {
     box-shadow: 5px 10px 8px rgba(25, 25, 25, 0.75);
+    cursor: pointer;
 }
 
 #inText:hover, #inText:active, nav a:hover, nav a:active {
     color: rgb(220, 113, 39);
+    cursor: pointer;
 }
 
 /*Paragraph Width*/
@@ -44,6 +46,7 @@ p {
 /*Form Formatting*/
 /*I used the https://learn.shayhowe.com/html-css/building-forms/ link for a lot of the fieldset and styling that I drew on for this exercise but I encorporated it into my own code in somewhat of my own way.*/
 form#payment {
+    margin-left: 1em;
     border: 1px solid #c6c7cc;
     border-radius: 5px;
     overflow: hidden;
@@ -115,6 +118,8 @@ input {
     border: 2px solid #999;
     transition: 0.2s all linear;
     margin-right: 5px;
+    
+    cursor: pointer;
 
     position: relative;
     top: 4px;
@@ -126,11 +131,12 @@ input {
 
 /*Checkout Cart Formatting*/
 #cart {
+    margin-left: 1em;
     display: block;
     border: 1px solid black;
     border-radius: 5px;
     overflow: hidden;
-    width: 40%;
+    width: 60%;
 }
 
 .itemInCart, .totalOfCart {
@@ -149,8 +155,29 @@ input {
 }
 
 .itemInCart img {
+    margin-right: auto;
     margin-top: auto;
     margin-bottom: auto;
-    max-width: 100%;
+    max-width: 50%;
     float: right;
+}
+
+@media screen and (min-width: 30em) {
+    .cartPayment {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+#productInformation, #productFeatures {
+    margin: 2em;
+}
+
+#productImg img{
+    width: 75%;
+    max-height: 100%;
+}
+
+#productImg, #productFeatures {
+    height: fit-content;
 }
